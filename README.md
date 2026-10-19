@@ -18,5 +18,5 @@ pipenv run python main.py --help
 pipenv run python -m pytest
 
 ## Team
-- Name 1
-- Name 2
+monicah
+victor
