@@ -2,6 +2,7 @@ import argparse
 from models import DailyHabit, WeeklyHabit
 from storage import load_habits, save_habits
 
+NAME_HELP = "Name of the habit"
 
 def find_habit(habits, name):
     for habit in habits:
@@ -13,7 +14,7 @@ parser = argparse.ArgumentParser(description="Habit Tracker")
 commands = parser.add_subparsers(dest="command")
 
 add = commands.add_parser("add-habit", help="Add a new habit")
-add.add_argument("name", help="Name of the habit")
+add.add_argument("name", help=NAME_HELP)
 add.add_argument("--weekly", action="store_true", help="Make it a weekly habit")
 
 commands.add_parser("list-habits", help="Show all habits")
